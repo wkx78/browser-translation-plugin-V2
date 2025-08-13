@@ -1,0 +1,5 @@
+# Node.js 依赖
+node_modules/
+
+# TypeScript 编译输出
+dist/

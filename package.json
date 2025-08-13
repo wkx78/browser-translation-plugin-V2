@@ -1,0 +1,22 @@
+{
+  "name": "browser-translation-plugin-v2",
+  "version": "1.0.0",
+  "description": "划词翻译插件",
+  "main": "dist/content.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "browser-extension",
+    "edge",
+    "typescript",
+    "text-selection",
+    "translation"
+  ],
+  "author": "wkx",
+  "license": "MIT"
+}
