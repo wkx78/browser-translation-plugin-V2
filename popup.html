@@ -3,21 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Selection Display</title>
+    <title>Translating Words</title>
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <div class="popup-container">
         <div class="header">
-            <h2>Translating Words</h2>
+            <h2>划词翻译</h2>
         </div>
+        
         <div class="content">
-            <p>将你选中的文字自动翻译成中文</p>
-            <div class="status">
-                <span class="status-indicator active"></span>
-                <span>插件已启用</span>
+            <p>基于 DeepSeek 大模型的智能翻译</p>
+            
+            <!-- 状态显示区域 -->
+            <div id="status" class="status">
+                <span class="status-indicator"></span>
+                <span id="status-text">检查配置中...</span>
+            </div>
+            <!-- API密钥设置区域 -->
+            <div class="api-section">
+                <button id="set-key-btn" class="set-key-btn">设置 DeepSeek API Key</button>
+                <button id="view-key-btn" class="view-key-btn" style="display: none;">查看 API Key</button>
             </div>
         </div>
     </div>
+
+    <!-- API密钥设置弹窗 -->
+    <div id="key-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>设置 DeepSeek API Key</h3>
+                <span class="close" id="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label for="api-key-input">API Key:</label>
+                    <input type="password" id="api-key-input" placeholder="请输入您的 DeepSeek API Key">
+                    <button type="button" id="toggle-visibility" class="toggle-btn">👁</button>
+                </div>
+                <div class="modal-actions">
+                    <button id="save-key" class="save-btn">保存</button>
+                    <button id="cancel-key" class="cancel-btn">取消</button>
+                </div>
+                <div class="help-text">
+                    <p>如何获取 DeepSeek API Key：</p>
+                    <a href="https://platform.deepseek.com/api_keys" target="_blank">
+                        🚀 申请 DeepSeek API
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 查看密钥弹窗 -->
+    <div id="view-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>当前 DeepSeek API Key</h3>
+                <span class="close" id="close-view-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="key-display">
+                    <code id="current-key">*********************</code>
+                    <button id="copy-key" class="copy-btn">复制</button>
+                </div>
+                <div class="modal-actions">
+                    <button id="delete-key" class="delete-btn">删除密钥</button>
+                    <button id="update-key" class="update-btn">更新密钥</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>

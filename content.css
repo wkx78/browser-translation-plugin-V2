@@ -67,15 +67,20 @@
 }
 
 .text-selection-tooltip .translation-loading {
-    color: #a0aec0;
+    color: #34d399;
     font-size: 11px;
     font-style: italic;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .text-selection-tooltip .translation-disabled {
-    color: #718096;
+    color: #fbbf24;
     font-size: 11px;
-    opacity: 0.6;
+    opacity: 0.8;
+    margin-top: 6px;
 }
 
 .text-selection-tooltip .translation-result {
@@ -83,10 +88,14 @@
 }
 
 .text-selection-tooltip .translation-text {
-    color: #e2e8f0;
+    color: #34d399;
     font-size: 13px;
     line-height: 1.4;
-    margin-bottom: 4px;
+    margin-top: 6px;
+    padding: 6px 8px;
+    background: rgba(52, 211, 153, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid #34d399;
 }
 
 .text-selection-tooltip .translation-info {
@@ -96,8 +105,13 @@
 }
 
 .text-selection-tooltip .translation-error {
-    color: #fc8181;
+    color: #f87171;
     font-size: 11px;
+    margin-top: 6px;
+    padding: 6px 8px;
+    background: rgba(248, 113, 113, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid #f87171;
 }
 
 @keyframes fadeIn {
