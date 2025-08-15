@@ -48,4 +48,59 @@
     opacity: 0.8;
     margin-top: 4px;
     color: #a0aec0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-selection-tooltip .language {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.text-selection-tooltip .translation-section {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.text-selection-tooltip .translation-loading {
+    color: #a0aec0;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.text-selection-tooltip .translation-disabled {
+    color: #718096;
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+.text-selection-tooltip .translation-result {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.text-selection-tooltip .translation-text {
+    color: #e2e8f0;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.text-selection-tooltip .translation-info {
+    color: #a0aec0;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.text-selection-tooltip .translation-error {
+    color: #fc8181;
+    font-size: 11px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }

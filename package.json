@@ -1,6 +1,5 @@
 {
   "name": "browser-translation-plugin-v2",
-  "version": "1.0.0",
   "description": "划词翻译插件",
   "main": "dist/content.js",
   "scripts": {
